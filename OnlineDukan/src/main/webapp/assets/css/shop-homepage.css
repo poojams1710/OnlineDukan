@@ -1,5 +1,12 @@
+
+html{
+	height:100%;
+}
+
 body {
-  padding-top: 70px
+  padding-top: 70px;
+  height:100%;
+
 }
 
 .slide-image {
@@ -43,5 +50,43 @@ body {
 }
 
 footer {
-  margin: 50px 0;
+  margin:  100px;
+  
+
 }
+/*
+    Custom styling
+*/
+.wrapper{
+	
+	min-height:100%;
+	position:relative;
+}
+
+.contnt  {
+	padding-bottom: 30px; /*Height of the footer*/
+	
+}
+.footer{
+	position:absolute;
+	bottom: 10px;
+	height:30px;
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

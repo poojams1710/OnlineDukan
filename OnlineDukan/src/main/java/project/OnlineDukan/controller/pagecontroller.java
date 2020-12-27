@@ -1,54 +1,41 @@
 package project.OnlineDukan.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class pagecontroller {
 	
 	@RequestMapping(value = {"/", "/home", "/index"})
-	public ModelAndView index(@RequestParam(name="logout",required=false)String logout) {		
+	public ModelAndView index() {		
 		ModelAndView mv = new ModelAndView("page");		
 		mv.addObject("title","Home");
-		
-		
-		if(logout!=null) {
-			mv.addObject("message", "You have successfully logged out!");			
-		}
-		
 		mv.addObject("userClickHome",true);
+
+		
 		return mv;				
 	}
 
+	@RequestMapping(value = "/about")
+	public ModelAndView about() {		
+		ModelAndView mv = new ModelAndView("page");		
+		mv.addObject("title","About Us");
+		mv.addObject("userClickAbout",true);
 
-//    @RequestMapping(value="/test")
-//    public ModelAndView test(@RequestParam(value="greeting",required=false)String greeting) 
-//    {
-//    	if(greeting == null)
-//    	{
-//    		greeting = "Hellow Users  ";
-//    	}
-//	  ModelAndView mv	= new ModelAndView("page");
-//    	mv.addObject("greeting",greeting);
-//	   return mv;
-//    }
-//    
-    
-    @RequestMapping(value="/test/{greeting}")
-    public ModelAndView test(@PathVariable("greeting")String greeting) 
-    {
-    	if(greeting == null)
-    	{
-    		greeting = "Hellow Users  ";
-        }
-	  ModelAndView mv	= new ModelAndView("page");
-    	mv.addObject("greeting",greeting);
-	   return mv;
-    }
-    
-    
-    
+		
+		return mv;				
+	}
+	
+	
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {		
+		ModelAndView mv = new ModelAndView("page");		
+		mv.addObject("title","Contact Us");
+		mv.addObject("userClickContact",true);
+
+		
+		return mv;				
+	}
+	
 }
