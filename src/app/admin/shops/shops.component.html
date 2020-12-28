@@ -1,0 +1,30 @@
+
+<h1>Shops Admin</h1>
+<a class="btn btn-primary mb-3" (click)="addShops()">add</a>
+<div class="container row">
+    <div   class="col-md-6">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ShopID</th>
+        <th>ShopName</th>
+        <th>ShopLocation</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let shop of shops" >
+        <td>{{shop.shopId}}</td>
+        <td>{{shop.shopname}}</td>
+        <td>{{shop.shopLoc}}</td>
+        <td><button type="button" class="btn btn-primary" >
+          <a  routerLink='/addProducts'>Add Products</a></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div   class="col-md-6">
+
+    <app-addshop *ngIf = "action === 'add'" [shop] ="newshop" > </app-addshop>
+  </div>
+</div>

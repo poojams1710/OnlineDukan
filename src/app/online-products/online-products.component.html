@@ -1,0 +1,23 @@
+
+   <div class="container row">
+  <div   class="col-md-6">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ProductId</th>
+      <th>ProductName</th>
+      <th>Productprice</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of newShopProducts" >
+      <td>{{product.productId}}</td>
+      <td>{{product.productname}}</td>
+      <td>{{product.productprice}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+

@@ -1,0 +1,18 @@
+
+<h1>Add Shop Admin</h1>
+
+<form>
+  <label for="name">Name</label>
+  <input type="text" class="form-control" id="name" placeholder="Shop Name" [(ngModel)]="shop.shopname" name="Shopname">
+
+  <label for="Location">ShopLOcation</label>
+  <input type="text" class="form-control" id="Location" placeholder="location" name="Location" [(ngModel)]="shop.shopLoc">
+
+
+    <br>
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="200" width="200" *ngIf="imgURL">
+
+  <br>
+  <button type="button" class="btn btn-success" (click)="saveshop()">Save Shop</button>
+</form>

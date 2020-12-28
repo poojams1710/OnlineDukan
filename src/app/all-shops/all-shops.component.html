@@ -1,0 +1,24 @@
+<div class="container row">
+  <div class="col-md-4" *ngFor="let shop of shops;let i=index">
+    <div class="card card-block">
+      <div class="offset-md-4 col-md-4">
+
+
+        <!-- <button (click)="hello()">data</button> -->
+        <button (click)="shopping(shop.shopId)">Choose</button>
+
+      </div>
+      <img class="custom-image-style" img src="{{shop.retrievedImage}}" height="300" width="200" style="margin-left: 60px;
+           margin-top: 10px">
+      <div class="shop-desc-container row">
+        <div>
+          <p style="margin-left: 60px"><strong>{{shop.shopname}}: ${{shop.shopLoc}}</strong></p>
+          <p style="margin-left: 60px">{{shop.shopId}}</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
