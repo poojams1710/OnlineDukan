@@ -1,0 +1,116 @@
+<div class="page-wrapper">
+
+  
+
+  <div class="page-container">
+      <!-- HEADER DESKTOP-->
+      <header [ngClass]="{
+        'header-desktop': isLoggedIn,
+        'header-desktop-lo': !isLoggedIn
+      }" >
+        
+          <div class="section-content section-content-p30">
+              <div class="container-fluid">
+                  <nav class="navbar navbar-expand ">
+                   
+                      <ul class="navbar-nav mr-auto" routerLinkActive="active">
+                        <li class="nav-item">
+                          <a href="/home" class="nav-link"  *ngIf="isLoggedIn" routerLink="home">Home </a>
+                        </li>
+                        
+                        <li class="nav-item" *ngIf="showAdminBoard">
+                          <a href="/admin" class="nav-link" routerLink="admin">Dashboard</a>
+                        </li>
+                        <li>
+                          <div class="header-wrap"  *ngIf="isLoggedIn">
+                              <form class="form-header" onsubmit="return false;" method="GET">
+                                  <input class="au-input au-input-sm" type="text" name="search"
+                                      placeholder="Search for Product" />
+                                  <button class="au-btn-submit" type="submit">
+                                      Search
+                                  </button>
+                              </form>
+                              <div class="cart-area d-n">
+                                  <a href="shopping-detail.html">
+                                      <div class="total">19.22 <span> 2</span> </div> <a href="/user"><i  [ngClass]="{'fa fa-shopping-cart':showCart}"
+                                          aria-hidden="true"  ></i></a>
+                                  </a>
+                              </div>
+                          </div>
+                      </li>
+                      </ul>
+                  
+                      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+                          
+                         
+                        <li class="nav-item">
+                          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/login" class="nav-link" routerLink="login">Login</a>
+                        </li>
+                      </ul>
+                  
+                      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+                        <li class="nav-item">
+                          <a href="/profile" class="nav-link" routerLink="profile">{{ name }}</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href class="nav-link" (click)="logout()">LogOut</a>
+                        </li>
+                      </ul>
+                    </nav>
+              
+                  <div class="account-wrap"></div>
+              </div>
+          </div>
+      </header>
+      <!-- END HEADER DESKTOP-->
+  
+      <!-- MAIN CONTENT-->
+      
+      <router-outlet></router-outlet>
+    
+     <!-- MENU SIDEBAR-->
+     <aside class="menu-sidebar d-none d-lg-block"  *ngIf="isLoggedIn">
+      <div class="logo">
+          <a href="home.html">
+              <img src="assets/images/logo.png" alt="onlineshopping" class="logo-responsive">
+          </a>
+      </div>
+      <div class="menu-sidebar-content js-scrollbar1">
+          <nav class="navbar-sidebar">
+              <ul class="list-unstyled navbar-list">
+                  <li>
+                      <a href="#">Ball</a>
+                  </li>
+                  <li>
+                      <a href="#">Bag</a>
+                  </li>
+                  <li>
+                      <a href="#">Book</a>
+                  </li>
+                  <li>
+                      <a href="#">Other</a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+  </aside>
+  <!-- END MENU SIDEBAR-->
+  
+  </div>
+  </div>
+  
+  
+  
+  <!-- END PAGE CONTAINER-->
+  
+  
+  <footer>
+      <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Help</a></li>
+      </ul>
+  </footer>
