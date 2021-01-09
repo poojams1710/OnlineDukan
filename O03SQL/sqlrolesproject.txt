@@ -1,0 +1,10 @@
+INSERT INTO roles(name) VALUES('ROLE_USER');
+
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+
+insert into users values(1,"admin@gmail.com","Dash","Bound","$2a$10$wRo.p7jo7BWeHVZAjtZaju/5C/5GKVIOo0keZWus650y4e0CN.Plq");
+
+ insert into user_roles values(1,2);
+
+#admin@gmail.com	
+#diana1234
