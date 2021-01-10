@@ -5,8 +5,6 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShopmenuComponent } from './shopmenu/shopmenu.component';
-import { UserTypeComponent } from './admin/user-type/user-type.component';
-import { AdduserComponent } from './admin/UserType/adduser/adduser.component';
 import {FormsModule } from '@angular/forms';
 import { ShopsComponent } from './admin/shops/shops.component';
 import { AddshopComponent } from './admin/Shops/addshop/addshop.component';
@@ -22,8 +20,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   declarations: [
     AppComponent,
     ShopmenuComponent,
-    UserTypeComponent,
-    AdduserComponent,
     ShopsComponent,
     AddshopComponent,
     AllShopsComponent,
