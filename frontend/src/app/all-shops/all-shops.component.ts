@@ -4,7 +4,7 @@ import { GetUserService } from '../get-user.service';
 import { ShopProducts } from '../model/ShopProducts';
 import { Shops } from '../model/shops';
 import { ShopmenuComponent } from '../shopmenu/shopmenu.component';
-import{ MessageService} from 'src/app/message.service';
+import{ MessageService} from 'frontend/src/app/message.service';
 import { ActivatedRoute } from '@angular/router';
 import { from } from 'rxjs';
 

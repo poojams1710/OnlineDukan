@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GetUserService } from 'src/app/get-user.service';
-import { Shops } from 'src/app/model/shops';
+import { GetUserService } from 'frontend/src/app/get-user.service';
+import { Shops } from 'frontend/src/app/model/shops';
 
 @Component({
   selector: 'app-shops',
