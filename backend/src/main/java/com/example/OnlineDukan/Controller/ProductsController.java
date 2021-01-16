@@ -50,8 +50,8 @@ public class ProductsController {
 //	
 	@RequestMapping(value = "/take/{id}", method = RequestMethod.GET)
 	public ResponseEntity<ShopProducts> getEmployeeById(@PathVariable Long id) {
-		ShopProducts employee = ProductRepository.findById(id).get();
-		return ResponseEntity.ok().body(employee);
+		ShopProducts shopps = ProductRepository.findById(id).get();
+		return ResponseEntity.ok().body(shopps);
 	}
 
 	
