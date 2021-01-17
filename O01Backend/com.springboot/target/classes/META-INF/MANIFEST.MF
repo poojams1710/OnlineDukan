@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Soham
+Build-Jdk: 11.0.8
+Implementation-Title: com.springboot
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.angularspringboot.fullstack
+Implementation-URL: https://spring.io/projects/spring-boot/com.springboo
+ t
+Created-By: Maven Integration for Eclipse
+
