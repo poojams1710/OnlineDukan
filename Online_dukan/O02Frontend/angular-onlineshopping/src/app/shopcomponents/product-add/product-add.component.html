@@ -1,0 +1,39 @@
+<p>product-add works!</p>
+<h3>Add Products</h3>
+  <form  (ngSubmit)="saveproduct()">
+    <div class="form-group">
+      <label for="name">ProductId</label>
+      <input type="text" class="form-control" id="productId" required [(ngModel)]="product.productId" name="productId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">ProductName</label>
+      <input type="text" class="form-control" id="productname" required [(ngModel)]="product.productname" name="productname">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Product Price </label>
+      <input type="text" class="form-control" id="productprice" required [(ngModel)]="product.productprice" name="productprice">
+    </div>
+
+
+    <div class="form-group">
+      <label for="name">Product Quantity </label>
+      <input type="text" class="form-control" id="productQuantity" required [(ngModel)]="product.productQuantity" name="productQuantity">
+    </div>
+
+
+    <div class="form-group">
+      <label for="name">Shop Id </label>
+      <input type="text" class="form-control" id="shopId" required [(ngModel)]="product.shopId" name="shopId">
+    </div>
+
+    <div class="form-group">
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="200" width="200" *ngIf="imgURL">
+     </div>
+
+    <button type="submit" class="btn btn-success">save Product</button>
+  </form>
+
+

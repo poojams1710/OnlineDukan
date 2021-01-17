@@ -1,0 +1,24 @@
+
+
+<div class="container row">
+  <div class="col-md-4" *ngFor="let product of products;let i=index">
+    <div class="card card-block">
+      <div class="offset-md-4 col-md-4">
+
+      </div>
+      <img class="custom-image-style" img src="{{product.retrievedImage}}" height="200" width="200" style="margin-left: 30px;
+           margin-top: 10px">
+      <div class="shop-desc-container row">
+        <div>
+          <p style="margin-left: 60px"><strong>{{product.productId}}: ${{product.productname}}</strong></p>
+          <p style="margin-left: 60px">{{product.productprice}}</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
