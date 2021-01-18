@@ -40,7 +40,7 @@ export class OnlineProductsComponent implements OnInit {
       const productretrived= new ShopProducts();
       productretrived.productId= product.productId;
       productretrived.productname = product.productname;
-      //populate retrieved image field so that book image can be displayed
+      //populate retrieved image field so that shops image can displayed basically converting it into base 64
       productretrived.retrievedImage = 'data:image/jpeg;base64,' + product.picByte;
 
       productretrived.picByte = product.picByte;
