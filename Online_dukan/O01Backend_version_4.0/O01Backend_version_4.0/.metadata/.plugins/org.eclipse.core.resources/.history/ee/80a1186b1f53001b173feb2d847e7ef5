@@ -1,0 +1,101 @@
+package com.springboot.model;
+
+
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "item")
+public class Item {
+	
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "itemid")
+	private int itemid;
+	
+	@Column(name ="itemname")
+	private String itemname;
+	
+	@Column(name = "description")
+	private String description;
+	
+	@Column(name="itemprice")
+	private float itemprice;
+	
+	@Column(name="stock")
+	private int stock;
+	
+	@Column(name="imageurl")
+	private String imageurl;
+	//private int itemcategoryid;
+	
+
+	@ManyToOne
+	@JoinColumn(name= "itemcategoryid", nullable=false)
+	private Itemcategory category;
+	
+	public int getItemid() {
+		return itemid;
+	}
+	public void setItemid(int itemid) {
+		this.itemid = itemid;
+	}
+	public String getItemname() {
+		return itemname;
+	}
+	public void setItemname(String itemname) {
+		this.itemname = itemname;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public float getItemprice() {
+		return itemprice;
+	}
+	public void setItemprice(float itemprice) {
+		this.itemprice = itemprice;
+	}
+	public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+	public String getImageurl() {
+		return imageurl;
+	}
+	public void setImageurl(String imageurl) {
+		this.imageurl = imageurl;
+	}
+	/*public int getItemcategoryid() {
+		return itemcategoryid;
+	}
+	public void setItemcategoryid(int itemcategoryid) {
+		this.itemcategoryid = itemcategoryid;
+	}*/
+
+	
+	public Itemcategory getCategory() {
+		return category;
+	}
+	public void setCategory(Itemcategory category) {
+		this.category = category;
+	}
+	
+	
+	
+
+}

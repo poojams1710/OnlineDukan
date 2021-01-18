@@ -1,0 +1,14 @@
+ng new angular-onlineshopping
+
+ng generate component components/item-list
+
+ng generate class common/item
+
+ng generate service services/item
+
+npm install bootstrap
+
+npm audit fix
+
+
+npm install @fortawesome/fontawesome-free

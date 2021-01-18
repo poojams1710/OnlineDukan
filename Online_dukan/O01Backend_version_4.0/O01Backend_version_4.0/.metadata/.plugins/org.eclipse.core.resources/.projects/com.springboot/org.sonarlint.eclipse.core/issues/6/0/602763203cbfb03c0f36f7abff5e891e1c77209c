@@ -1,0 +1,5 @@
+
+”squid:CallToDeprecatedMethodp"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ô­Áøýÿÿÿÿ8¡Ë’Ûî.HùRMINORZ
+CODE_SMELL
+squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(÷‰îƒ8¬µ¥ãî.H¶RMAJORZ
+CODE_SMELL

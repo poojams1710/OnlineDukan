@@ -1,0 +1,64 @@
+create database project;
+
+use project;
+
+
+
+
+create table itemcategory(
+itemcategoryid int(20) not null auto_increment primary key,
+itemname varchar(255) default null
+);
+
+
+insert into itemcategory values(1,'Ball');
+insert into itemcategory values(2,'Bag');
+insert into itemcategory values(3,'Book');
+
+create table item(
+itemid int(10) not null auto_increment primary key,
+itemname varchar(255),
+description varchar(255),
+itemprice float,
+stock int(10),
+imageurl varchar(255) default null,
+itemcategoryid int(10),
+foreign key(itemcategoryid) references itemcategory(itemcategoryid)
+);
+
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Soccer Ball',500,10,1,'This is a Soccer Ball','assets/images/products/ball/301.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Basket Ball',800,20,1,'This is a Basket Ball','assets/images/products/ball/302.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Rubber Ball',100,50,1,'This is a Rubber Ball','assets/images/products/ball/303.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Golden Ball',1000,5,1,'This is a Golden Ball','assets/images/products/ball/304.png');
+
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Red Bag',300,25,2,'This is a Red Bag','assets/images/products/bag/100.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Pink Bag',920,25,2,'This is a Pink Bag','assets/images/products/bag/101.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Green Bag',250,25,2,'This is a Green Bag','assets/images/products/bag/102.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Violet Bag',700,25,2,'This is a Violet Bag','assets/images/products/bag/103.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Blue Bag',500,25,2,'This is a Blue Bag','assets/images/products/bag/104.png');
+
+
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Maths Book',350,50,3,'This is a Maths Book','assets/images/products/book/201.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Science Book',130,50,3,'This is a Science Book','assets/images/products/book/202.png');
+
+
+
+
+
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Soccer Ball',500,10,4,'This is a Soccer Ball','assets/images/products/all/301.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Basket Ball',800,20,4,'This is a Basket Ball','assets/images/products/all/302.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Rubber Ball',100,50,4,'This is a Rubber Ball','assets/images/products/all/303.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Golden Ball',1000,5,4,'This is a Golden Ball','assets/images/products/all/304.png');
+
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Red Bag',300,25,4,'This is a Red Bag','assets/images/products/all/100.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Pink Bag',920,25,4,'This is a Pink Bag','assets/images/products/all/101.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Green Bag',250,25,4,'This is a Green Bag','assets/images/products/all/102.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Violet Bag',700,25,4,'This is a Violet Bag','assets/images/products/all/103.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Blue Bag',500,25,4,'This is a Blue Bag','assets/images/products/all/104.png');
+
+
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Maths Book',350,50,4,'This is a Maths Book','assets/images/products/all/201.png');
+insert into item(itemname,itemprice,stock,itemcategoryid,description,imageurl) values('Science Book',130,50,4,'This is a Science Book','assets/images/products/all/202.png');
+
+
+

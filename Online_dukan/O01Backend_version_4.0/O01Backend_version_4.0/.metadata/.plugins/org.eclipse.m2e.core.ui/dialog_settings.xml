@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Soham\Project\Main\Version1.0.0\O01Backend\com.springboot\src\main\java\com\springboot"/>
+			<item value="C:\Soham\Project\Main\Version1.0.0\O01Backend\examproj"/>
+			<item value="C:\JavaFile\examproj"/>
+			<item value="C:\Soham\Project\Main\Version1.0.0\O01Backend\com.springboot"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

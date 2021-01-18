@@ -1,0 +1,15 @@
+package com.springboot.Repository;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.springboot.model.Item;
+
+@CrossOrigin(origins = "*")
+public interface ItemRepository extends JpaRepository<Item, Integer> {
+
+	Page<Item> findByCategoryId(@RequestParam("itemcategoryid") Integer itemid, Pageable pageable);
+}
