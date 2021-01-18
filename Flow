@@ -1,0 +1,25 @@
+CMD and flow to understand this code .
+
+After login part completes.
+
+Once at admin side You go ..
+
+Admin can Register the shop ..with shop name and location .shopId has automatic increament in Db.one can set Id Value from Db my Autoincreament set.
+
+Once shop Registered that ll start on same page.
+Registered shop can add their shop products .
+(IMP HAVE TO CHOOSE SHOPID FOR PRODUCT REGISTERING)
+
+
+
+Once the customer register and login on site ...
+he can start shopping all Registered shop getting appear on site.
+one can choose his choice shop ...and Look all the product inside that shop.
+
+No any db to create Hibernate is creating Tables.Only through presentation u have to give data same data ...customer ll look.
+
+
+
+
+
+
