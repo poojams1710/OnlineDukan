@@ -53,7 +53,7 @@ public class ProductsController {
 //	}
 //	
 	@RequestMapping(value = "/take/{id}", method = RequestMethod.GET)
-	public ResponseEntity<ShopProducts> getEmployeeById(@PathVariable Long id) {
+	public ResponseEntity<ShopProducts> getShopById(@PathVariable Long id) {
 		ShopProducts shopps = ProductRepository.findById(id).get();
 		return ResponseEntity.ok().body(shopps);
 	}
