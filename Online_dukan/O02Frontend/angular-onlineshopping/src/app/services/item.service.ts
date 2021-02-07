@@ -10,7 +10,7 @@ import { Item } from '../common/item';
 export class ItemService {
 
 
-  private baseUrl ='http://localhost:9090/item/getall';
+  private baseUrl ='http://localhost:9090/api/items';
 
   constructor(private httpClient: HttpClient) { }
 
